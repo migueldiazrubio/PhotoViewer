@@ -13,6 +13,8 @@
 		C45C140D1C03BB2900E4D24B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C45C140C1C03BB2900E4D24B /* Assets.xcassets */; };
 		C45C14101C03BB2900E4D24B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45C140E1C03BB2900E4D24B /* LaunchScreen.storyboard */; };
 		C45C141B1C03BB2A00E4D24B /* PhotoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C141A1C03BB2A00E4D24B /* PhotoViewerTests.swift */; };
+		C45C14271C03BED300E4D24B /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C14261C03BED300E4D24B /* Photo.swift */; };
+		C45C14291C03C37000E4D24B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C14281C03C37000E4D24B /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		C45C14161C03BB2A00E4D24B /* PhotoViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45C141A1C03BB2A00E4D24B /* PhotoViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerTests.swift; sourceTree = "<group>"; };
 		C45C141C1C03BB2A00E4D24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C45C14261C03BED300E4D24B /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C45C14281C03C37000E4D24B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		C45C14041C03BB2900E4D24B /* PhotoViewer */ = {
 			isa = PBXGroup;
 			children = (
+				C45C14251C03BE8500E4D24B /* Model */,
 				C45C14051C03BB2900E4D24B /* AppDelegate.swift */,
 				C45C14071C03BB2900E4D24B /* ViewController.swift */,
 				C45C14091C03BB2900E4D24B /* Main.storyboard */,
@@ -94,6 +99,15 @@
 				C45C141C1C03BB2A00E4D24B /* Info.plist */,
 			);
 			path = PhotoViewerTests;
+			sourceTree = "<group>";
+		};
+		C45C14251C03BE8500E4D24B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C45C14261C03BED300E4D24B /* Photo.swift */,
+				C45C14281C03C37000E4D24B /* User.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45C14291C03C37000E4D24B /* User.swift in Sources */,
+				C45C14271C03BED300E4D24B /* Photo.swift in Sources */,
 				C45C14081C03BB2900E4D24B /* ViewController.swift in Sources */,
 				C45C14061C03BB2900E4D24B /* AppDelegate.swift in Sources */,
 			);
