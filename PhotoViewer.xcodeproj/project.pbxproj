@@ -12,9 +12,9 @@
 		C45C140B1C03BB2900E4D24B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45C14091C03BB2900E4D24B /* Main.storyboard */; };
 		C45C140D1C03BB2900E4D24B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C45C140C1C03BB2900E4D24B /* Assets.xcassets */; };
 		C45C14101C03BB2900E4D24B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45C140E1C03BB2900E4D24B /* LaunchScreen.storyboard */; };
-		C45C141B1C03BB2A00E4D24B /* PhotoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C141A1C03BB2A00E4D24B /* PhotoViewerTests.swift */; };
 		C45C14271C03BED300E4D24B /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C14261C03BED300E4D24B /* Photo.swift */; };
 		C45C14291C03C37000E4D24B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C14281C03C37000E4D24B /* User.swift */; };
+		C45C142C1C03C7E800E4D24B /* PhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C142B1C03C7E800E4D24B /* PhotoTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +36,11 @@
 		C45C140F1C03BB2900E4D24B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C45C14111C03BB2900E4D24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C45C14161C03BB2A00E4D24B /* PhotoViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C45C141A1C03BB2A00E4D24B /* PhotoViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerTests.swift; sourceTree = "<group>"; };
 		C45C141C1C03BB2A00E4D24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C45C14261C03BED300E4D24B /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		C45C14281C03C37000E4D24B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C45C142A1C03C7E700E4D24B /* PhotoViewerTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoViewerTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		C45C142B1C03C7E800E4D24B /* PhotoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +96,9 @@
 		C45C14191C03BB2A00E4D24B /* PhotoViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				C45C141A1C03BB2A00E4D24B /* PhotoViewerTests.swift */,
 				C45C141C1C03BB2A00E4D24B /* Info.plist */,
+				C45C142B1C03C7E800E4D24B /* PhotoTests.swift */,
+				C45C142A1C03C7E700E4D24B /* PhotoViewerTests-Bridging-Header.h */,
 			);
 			path = PhotoViewerTests;
 			sourceTree = "<group>";
@@ -222,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C45C141B1C03BB2A00E4D24B /* PhotoViewerTests.swift in Sources */,
+				C45C142C1C03C7E800E4D24B /* PhotoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,10 +365,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PhotoViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.redmonster.PhotoViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoViewerTests/PhotoViewerTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoViewer.app/PhotoViewer";
 			};
 			name = Debug;
@@ -375,10 +380,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PhotoViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.redmonster.PhotoViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoViewerTests/PhotoViewerTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoViewer.app/PhotoViewer";
 			};
 			name = Release;
