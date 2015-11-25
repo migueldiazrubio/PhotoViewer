@@ -15,6 +15,7 @@
 		C45C14271C03BED300E4D24B /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C14261C03BED300E4D24B /* Photo.swift */; };
 		C45C14291C03C37000E4D24B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C14281C03C37000E4D24B /* User.swift */; };
 		C45C142C1C03C7E800E4D24B /* PhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45C142B1C03C7E800E4D24B /* PhotoTests.swift */; };
+		C45FCF5E1C063D3300CB0AC0 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45FCF5D1C063D3300CB0AC0 /* UserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		C45C14281C03C37000E4D24B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C45C142A1C03C7E700E4D24B /* PhotoViewerTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoViewerTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		C45C142B1C03C7E800E4D24B /* PhotoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTests.swift; sourceTree = "<group>"; };
+		C45FCF5D1C063D3300CB0AC0 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				C45C141C1C03BB2A00E4D24B /* Info.plist */,
 				C45C142B1C03C7E800E4D24B /* PhotoTests.swift */,
+				C45FCF5D1C063D3300CB0AC0 /* UserTests.swift */,
 				C45C142A1C03C7E700E4D24B /* PhotoViewerTests-Bridging-Header.h */,
 			);
 			path = PhotoViewerTests;
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45FCF5E1C063D3300CB0AC0 /* UserTests.swift in Sources */,
 				C45C142C1C03C7E800E4D24B /* PhotoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				C45C14211C03BB2A00E4D24B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C45C14221C03BB2A00E4D24B /* Build configuration list for PBXNativeTarget "PhotoViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				C45C14241C03BB2A00E4D24B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
