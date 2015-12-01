@@ -21,7 +21,7 @@ public class APIWrapper500pxMock: APIWrapper500pxProtocol {
         
         for i in 0..<20 {
             let photo = Photo(photoID: i, name: "Photo \(i)")
-            
+            photo.photoURL = "https://lh3.googleusercontent.com/E6EO3XO6zP7NtBq2L9SDF1DbBoYamUWc8QTRvOFuQg_Gka2Vw_RIv-AjU5Ysu4XgwHU=w170"
             photoList.add(photo)
         }
         
