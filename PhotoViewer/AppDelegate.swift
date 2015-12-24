@@ -17,14 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         //let wrapper: APIWrapper500pxProtocol = APIWrapper500pxMock()
-        let wrapper: APIWrapper500pxProtocol = APIWrapper500px()
-
-        let photoList = wrapper.popularPhotos("vBl2BWQtD9tACXGwMvifaR5LUVoErWKSRI09eQlA")
-        
-        let nav = window?.rootViewController as! UINavigationController
-        let rootViewController = nav.topViewController as! PhotoListViewController
-        
-        rootViewController.photoList = photoList  // property dependency injection
+//        let wrapper: APIWrapper500pxProtocol = APIWrapper500px()
+//
+//        let photoList = wrapper.popularPhotos("vBl2BWQtD9tACXGwMvifaR5LUVoErWKSRI09eQlA")
+//        
+//        let nav = window?.rootViewController as! UINavigationController
+//        let rootViewController = nav.topViewController as! PhotoListViewController
+//        
+//        rootViewController.photoList = photoList  // property dependency injection
         
         // typhoon -> framework de inyección de dependencias
         

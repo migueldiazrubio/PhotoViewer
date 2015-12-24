@@ -12,14 +12,18 @@ public class APIWrapper500pxMock: APIWrapper500pxProtocol {
     
     let perretePhotos = ["https://lh3.googleusercontent.com/E6EO3XO6zP7NtBq2L9SDF1DbBoYamUWc8QTRvOFuQg_Gka2Vw_RIv-AjU5Ysu4XgwHU=w170", "https://elrubiusomgyoutube.files.wordpress.com/2014/09/f3d4e-10684243_610278742425057_638483850_n.jpg?w=788", "https://lh3.ggpht.com/KWH-9MnQWsKwIWIolXcoCe5JiMXHvV8w_3J91FSBSp4uSThh5RvkOuG7MjfBH9np_IQ=w300"]
     
+    var delegate: APIWrapper500pxDelegate?
+    
     public init()
     {
         
     }
     
-    public func popularPhotos(consumerKey: String) -> PhotoList {
+    public func popularPhotos(consumerKey: String) {
         
         let photoList = PhotoList()
+        
+        delegate?.APIWrapperWillStartAccesing(self)
         
         for i in 0..<200 {
             let photo = Photo(photoID: i, name: "Photo \(i)")
@@ -29,13 +33,12 @@ public class APIWrapper500pxMock: APIWrapper500pxProtocol {
             photo.photoURL = perretePhotos[idx]
             photoList.add(photo)
         }
-        
-        return photoList
+        delegate?.APIWrapperDidFinish(self, photolist: photoList)
     }
     
-    public func popularPhotos(consumerKey: String, resultPageNumber: Int) -> PhotoList
+    public func popularPhotos(consumerKey: String, resultPageNumber: Int)
     {
-        return self.popularPhotos(consumerKey)
+        self.popularPhotos(consumerKey)
         
     }
 }

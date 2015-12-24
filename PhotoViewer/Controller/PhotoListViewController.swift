@@ -8,16 +8,35 @@
 
 import UIKit
 
-class PhotoListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PhotoListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, APIWrapper500pxDelegate {
     
     var photoList: PhotoList?
+    let wrapper: APIWrapper500px = APIWrapper500px()
     
     @IBOutlet weak var photoCollection: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.getDataFrom500pxServers()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @IBAction func getDataFrom500pxServers() {
+        
+        wrapper.delegate = self
+        wrapper.popularPhotos("vBl2BWQtD9tACXGwMvifaR5LUVoErWKSRI09eQlA")
+    }
+    
+    func APIWrapperWillStartAccesing(apiWrapper: APIWrapper500pxProtocol) {
+        
+        
+    }
+    
+    func APIWrapperDidFinish(apiWrapper: APIWrapper500pxProtocol, photolist: PhotoList) {
+        
+        self.photoList = photolist
+        self.photoCollection.reloadData()
     }
 
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {

@@ -29,6 +29,7 @@
 		C4D80AD11C29C95A00067254 /* JSONParser500px.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D80AD01C29C95A00067254 /* JSONParser500px.swift */; };
 		C4DE57061C0E362A00B6CDC1 /* String+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE57051C0E362A00B6CDC1 /* String+LoadImage.swift */; };
 		C4F8B6451C0E2A7700676C80 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8B6441C0E2A7700676C80 /* PhotoCell.swift */; };
+		C4FE14591C2C0A3F00DECE6F /* APIWrapper500pxDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE14581C2C0A3F00DECE6F /* APIWrapper500pxDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		C4DE57041C0E329D00B6CDC1 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		C4DE57051C0E362A00B6CDC1 /* String+LoadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+LoadImage.swift"; sourceTree = "<group>"; };
 		C4F8B6441C0E2A7700676C80 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		C4FE14581C2C0A3F00DECE6F /* APIWrapper500pxDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIWrapper500pxDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				C45FCF661C06610400CB0AC0 /* APIWrapper500pxMock.swift */,
 				C45FCF641C065F7700CB0AC0 /* APIWrapper500pxProtocol.swift */,
 				C44F32501C1A0FFB00C807E2 /* APIWrapper500px.swift */,
+				C4FE14581C2C0A3F00DECE6F /* APIWrapper500pxDelegate.swift */,
 			);
 			path = API500px;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				C45FCF671C06610400CB0AC0 /* APIWrapper500pxMock.swift in Sources */,
 				C45C14061C03BB2900E4D24B /* AppDelegate.swift in Sources */,
 				C45FCF6E1C066AFB00CB0AC0 /* Readme.md in Sources */,
+				C4FE14591C2C0A3F00DECE6F /* APIWrapper500pxDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
