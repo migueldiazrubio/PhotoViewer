@@ -11,4 +11,6 @@ import Foundation
 public protocol APIWrapper500pxProtocol {
     
     func popularPhotos(consumerKey: String) -> PhotoList
+    func popularPhotos(consumerKey: String, resultPageNumber: Int) -> PhotoList
+
 }

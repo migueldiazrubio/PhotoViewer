@@ -32,4 +32,10 @@ public class APIWrapper500pxMock: APIWrapper500pxProtocol {
         
         return photoList
     }
+    
+    public func popularPhotos(consumerKey: String, resultPageNumber: Int) -> PhotoList
+    {
+        return self.popularPhotos(consumerKey)
+        
+    }
 }
