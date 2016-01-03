@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--500px PhotoViewer-->
+        <!--PhotoViewer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PhotoListViewController" customModule="PhotoViewer" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,7 +64,6 @@
                                         <connections>
                                             <outlet property="photoImage" destination="aHG-rg-DZ0" id="Rwy-XV-uSJ"/>
                                             <outlet property="photoTitle" destination="Gn4-IJ-4yj" id="ood-ZK-BcO"/>
-                                            <segue destination="LLr-jp-Z6q" kind="show" identifier="ShowDetail" id="fil-cH-7JW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -82,7 +81,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dey-GN-gjw" secondAttribute="bottom" id="jR2-Ih-VvK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="500px PhotoViewer" id="dLJ-bH-lnW">
+                    <navigationItem key="navigationItem" title="PhotoViewer" id="dLJ-bH-lnW">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="m8x-Rs-Wf2">
                             <connections>
                                 <action selector="getDataFrom500pxServers" destination="BYZ-38-t0r" id="dK6-1f-U9a"/>
@@ -100,7 +99,7 @@
         <!--Photo Detail-->
         <scene sceneID="Oze-Sx-HVX">
             <objects>
-                <viewController title="Photo Detail" id="LLr-jp-Z6q" customClass="DetailPhotoViewController" customModule="PhotoViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailPhotoViewController" title="Photo Detail" id="LLr-jp-Z6q" customClass="DetailPhotoViewController" customModule="PhotoViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2ML-qB-MX2"/>
                         <viewControllerLayoutGuide type="bottom" id="KTR-fV-p7W"/>
@@ -109,7 +108,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Px-pF-P8h">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Px-pF-P8h">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcx-cF-O58">

@@ -46,41 +46,6 @@ class PhotoListViewController: UIViewController, UICollectionViewDelegate, UICol
         self.photoCollection.reloadData()
         self.refreshControl.endRefreshing()
     }
-
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        
-        return 1
-    }
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        let elementCount: Int
-        
-        if let photoList = self.photoList {
-            elementCount = photoList.count()
-        } else {
-            elementCount = 0
-        }
-        
-        return elementCount
-
-    }
-    
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoCell
-        
-        let photo = self.photoList?.elementAt(indexPath.row)
-        
-        cell.photo = photo
-        
-        return cell
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
-        return CGSizeMake(180, 180)
-    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
