@@ -64,6 +64,7 @@
                                         <connections>
                                             <outlet property="photoImage" destination="aHG-rg-DZ0" id="Rwy-XV-uSJ"/>
                                             <outlet property="photoTitle" destination="Gn4-IJ-4yj" id="ood-ZK-BcO"/>
+                                            <segue destination="LLr-jp-Z6q" kind="show" identifier="ShowDetail" id="fil-cH-7JW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -95,6 +96,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1250" y="400"/>
+        </scene>
+        <!--Photo Detail-->
+        <scene sceneID="Oze-Sx-HVX">
+            <objects>
+                <viewController title="Photo Detail" id="LLr-jp-Z6q" customClass="DetailPhotoViewController" customModule="PhotoViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2ML-qB-MX2"/>
+                        <viewControllerLayoutGuide type="bottom" id="KTR-fV-p7W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Ad-UT-cLT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Px-pF-P8h">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcx-cF-O58">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="e0M-rb-h0Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zcx-cF-O58" secondAttribute="trailing" id="0vG-QD-Jlm"/>
+                            <constraint firstItem="zcx-cF-O58" firstAttribute="leading" secondItem="5Ad-UT-cLT" secondAttribute="leading" id="ZCL-7b-oeN"/>
+                            <constraint firstItem="6Px-pF-P8h" firstAttribute="top" secondItem="2ML-qB-MX2" secondAttribute="bottom" id="iCJ-w0-LOg"/>
+                            <constraint firstItem="KTR-fV-p7W" firstAttribute="top" secondItem="6Px-pF-P8h" secondAttribute="bottom" id="iFr-io-5CE"/>
+                            <constraint firstAttribute="trailing" secondItem="6Px-pF-P8h" secondAttribute="trailing" id="lis-5j-w5P"/>
+                            <constraint firstItem="KTR-fV-p7W" firstAttribute="top" secondItem="zcx-cF-O58" secondAttribute="bottom" id="mng-D7-psf"/>
+                            <constraint firstItem="6Px-pF-P8h" firstAttribute="leading" secondItem="5Ad-UT-cLT" secondAttribute="leading" id="xVb-EV-EsZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailImage" destination="6Px-pF-P8h" id="tv8-gb-wHo"/>
+                        <outlet property="detailTitle" destination="zcx-cF-O58" id="ZCs-Gg-Ypa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BFc-Qj-iSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="400"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hUx-5n-akZ">
