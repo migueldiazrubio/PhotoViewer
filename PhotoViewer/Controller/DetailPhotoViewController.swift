@@ -12,9 +12,14 @@ class DetailPhotoViewController: UIViewController {
     
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailTitle: UILabel!
+    
+    var photo: Photo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.detailImage.image = self.photo?.photoURL?.loadImage()
+        self.detailTitle.text = self.photo?.name
 
         // Do any additional setup after loading the view.
     }
